@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Vishvanshu Chauhan — Neon Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- EmailJS (replace your user ID in script.js init) -->
+  <script src="https://cdn.emailjs.com/sdk/3.11.0/email.min.js"></script>
+</head>
+<body>
+  <!-- ====== 0) Cyberpunk Loading Screen ====== -->
+  <div id="loader" aria-hidden="true">
+    <div class="loader-inner">
+      <div class="scanline"></div>
+      <div class="loader-text">
+        <span class="glitch" data-text="Booting Vishufolio OS...">Booting Vishufolio OS...</span>
+        <span class="glitch small" data-text="Loading modules: UI.neon | Core.holo | Net.contact">Loading modules: UI.neon | Core.holo | Net.contact</span>
+      </div>
+      <div class="boot-bars">
+        <div class="boot-bar"></div>
+        <div class="boot-bar"></div>
+        <div class="boot-bar"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Particles Background -->
+  <div class="particles-container" aria-hidden="true"></div>
+
+  <!-- Neon Timeline Path (fixed left) -->
+  <aside class="timeline" aria-hidden="true">
+    <a href="#about" class="dot" data-target="about" title="About"></a>
+    <a href="#projects" class="dot" data-target="projects" title="Projects"></a>
+    <a href="#stats" class="dot" data-target="stats" title="Stats"></a>
+    <a href="#contact" class="dot" data-target="contact" title="Contact"></a>
+  </aside>
+
+  <!-- Navbar (HUD-style) -->
+  <header>
+    <div class="navbar hud">
+      <div class="logo">Vishufolio</div>
+
+      <!-- accessible button for menu -->
+      <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="bar" aria-hidden="true"></span>
+        <span class="bar" aria-hidden="true"></span>
+        <span class="bar" aria-hidden="true"></span>
+      </button>
+
+      <ul class="nav-links" role="menu">
+        <li role="none"><a role="menuitem" href="#about">About</a></li>
+        <li role="none"><a role="menuitem" href="#projects">Projects</a></li>
+        <li role="none"><a role="menuitem" href="#stats">Stats</a></li>
+        <li role="none"><a role="menuitem" href="#contact">Contact</a></li>
+        <li role="none"><button id="cmdk-btn" class="btn micro magnetic" type="button" aria-label="Command Palette (Ctrl+K)">⌘</button></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home" aria-label="Home">
+    <div class="holo-wrap">
+      <div class="holo-avatar magnetic" aria-hidden="true">
+        <img src="assests\Vishvanshu.jpg" alt="Holographic avatar" />
+        <div class="holo-overlay"></div>
+      </div>
+    </div>
+
+    <h1>Hi, I'm <span class="highlight">VISHVANSHU CHAUHAN</span></h1>
+    <h2>Fullstack Developer • AI Enthusiast • Game Dev</h2>
+
+    <div class="hero-actions">
+      <a href="#projects" class="btn magnetic">View Projects</a>
+      <!-- keep the CV download as you had it -->
+      <a href="assets/Vishvanshu_Resume.pdf" class="btn outline magnetic" download>Download CV</a>
+    </div>
+
+    <div class="hero-meta">
+      <div class="meta-item">GL Bajaj Institute (B.Tech - CSE AI)</div>
+      <div class="meta-item">Diploma CSE — Teerthanker Mahaveer University</div>
+      <div class="meta-item">Smart India Hackathon 2025 — Participant</div>
+    </div>
+
+    <div class="scroll-indicator" aria-hidden="true">Scroll</div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="about" data-section="about" aria-labelledby="about-heading">
+    <h2 id="about-heading">About Me</h2>
+    <p>
+      I build beautiful and functional web applications and experiment with AI-driven features.
+      I have experience in Java, Python, C/C++, web tech (HTML/CSS/JS) and game development (Godot).
+      I enjoy making interactive UIs with neon/cyberpunk aesthetics and efficient, maintainable code.
+    </p>
+    <div class="quick-contact">
+      <div><strong>Email:</strong> <a href="mailto:chauhanvishvanshu@gmail.com">chauhanvishvanshu@gmail.com</a></div>
+      <div><strong>Phone:</strong> +91 63978 35158</div>
+      <div><strong>Location:</strong> Greater Noida, India</div>
+    </div>
+  </section>
+
+  <!-- Projects (replaced with real items from your resume) -->
+  <section id="projects" data-section="projects" aria-labelledby="projects-heading">
+    <h2 id="projects-heading">Projects</h2>
+    <div class="project-grid">
+      <article class="project-card magnetic" tabindex="0">
+        <h3>Mock Buddy</h3>
+        <p>Mock interview web app — frontend built with HTML/CSS/JS. Helps practice common interview questions and records answers for review.</p>
+        <div class="project-tags"><span>Web</span><span>JavaScript</span><span>UX</span></div>
+      </article>
+
+      <article class="project-card magnetic" tabindex="0">
+        <h3>Voice Assistant — Manya</h3>
+        <p>Python-based voice assistant with speech recognition, simple NLP commands and system integrations for common tasks.</p>
+        <div class="project-tags"><span>Python</span><span>Speech</span><span>AI</span></div>
+      </article>
+
+      <article class="project-card magnetic" tabindex="0">
+        <h3>E-Exam Application</h3>
+        <p>Desktop exam system implemented with Java (AWT/Swing) + SQL backend — built during diploma internship to manage tests & results.</p>
+        <div class="project-tags"><span>Java</span><span>SQL</span><span>Desktop</span></div>
+      </article>
+
+      <article class="project-card magnetic" tabindex="0">
+        <h3>Aayudhm (Game)</h3>
+        <p>2D action game made with Godot; pixel art created in Aseprite. Focus on gameplay feel and level design.</p>
+        <div class="project-tags"><span>Godot</span><span>GameDev</span><span>Aseprite</span></div>
+      </article>
+
+      <article class="project-card magnetic" tabindex="0">
+        <h3>Wish Website</h3>
+        <p>Portfolio / small e-commerce style website built with HTML/CSS/JavaScript during diploma — responsive layout, basic JS interactions.</p>
+        <div class="project-tags"><span>HTML</span><span>CSS</span><span>Responsive</span></div>
+      </article>
+
+      <article class="project-card magnetic" tabindex="0">
+        <h3>Online Voting Machine</h3>
+        <p>University-level C project simulating secure voting flows and tallying. Focused on correctness and UX for terminals.</p>
+        <div class="project-tags"><span>C</span><span>Systems</span><span>Security</span></div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Live GitHub Stats -->
+  <section id="stats" data-section="stats" aria-labelledby="stats-heading">
+    <h2 id="stats-heading">GitHub & Stats</h2>
+    <div class="stats-grid">
+      <div class="stat-card magnetic">
+        <div class="stat-value" id="gh-repos">--</div>
+        <div class="stat-label">Public Repos</div>
+      </div>
+      <div class="stat-card magnetic">
+        <div class="stat-value" id="gh-stars">--</div>
+        <div class="stat-label">Total Stars</div>
+      </div>
+      <div class="stat-card magnetic">
+        <div class="stat-value" id="gh-followers">--</div>
+        <div class="stat-label">Followers</div>
+      </div>
+    </div>
+    
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" data-section="contact" aria-labelledby="contact-heading">
+    <h2 id="contact-heading">Contact Me</h2>
+    <form id="contact-form" aria-label="Contact form">
+      <input type="text" id="name" placeholder="Your Name" required />
+      <input type="email" id="email" placeholder="Your Email" required />
+      <textarea id="message" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn magnetic">Send Message</button>
+      <small id="form-status" class="form-status" role="status" aria-live="polite"></small>
+    </form>
+
+    <div class="social-icons" aria-label="Social links">
+      <!-- Replace href="#" with your real links -->
+      <a href="https://github.com/chauhanvishvanshu" class="social-icon magnetic" aria-label="GitHub" title="GitHub">
+        <!-- GitHub SVG -->
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303..."></path></svg>
+      </a>
+
+      <a href="https://www.linkedin.com/in/vishvanshu-chauhan/" class="social-icon magnetic" aria-label="LinkedIn" title="LinkedIn">
+        <!-- LinkedIn SVG -->
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.9 6 2.5 6S0 4.88 0 3.5 1.1 1 2.5 1 4.98 2.12 4.98 3.5zM.2 24h4.6V7.98H.2V24zM8.5 24h4.4v-8.5c0-4.8 6.4-5.2 6.4 0V24h4.4V13.2c0-10.3-11.2-9.9-15.2-4.8V7.98H8.5V24z"/></svg>
+      </a>
+
+      <a href="https://x.com/vishvanshu_" class="social-icon magnetic" aria-label="Twitter" title="Twitter">
+        <!-- Twitter SVG -->
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 4.56c-.89.39-1.84.65-2.84.77 1.02-.61 1.8-1.57 2.17-2.72-.96.57-2.03.98-3.17 1.2C18.4 2.9 17.1 2 15.6 2c-2.65 0-4.8 2.15-4.8 4.8 0 .38.04.75.12 1.11C6.7 7.78 3.58 5.9 1.64 3.1c-.42.72-.66 1.56-.66 2.45 0 1.69.86 3.18 2.17 4.05-.8-.02-1.56-.25-2.22-.62v.06c0 2.35 1.67 4.32 3.89 4.77-.41.11-.84.17-1.29.17-.31 0-.62-.03-.92-.09.62 1.93 2.43 3.34 4.57 3.38-1.67 1.31-3.77 2.09-6.05 2.09-.39 0-.78-.02-1.16-.07 2.17 1.39 4.75 2.2 7.52 2.2 9.03 0 13.98-7.48 13.98-13.98 0-.21 0-.42-.02-.63.96-.69 1.8-1.56 2.46-2.55z"/></svg>
+      </a>
+
+      <a href="https://www.instagram.com/vishvanshu_chauhan/" class="social-icon magnetic" aria-label="Instagram" title="Instagram">
+        <!-- Instagram SVG -->
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 2C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 5-5V7c0-2.76-2.24-5-5-5H7zm8 3a1 1 0 110 2 1 1 0 010-2zM12 7.9A4.1 4.1 0 1012 16a4.1 4.1 0 000-8.1zM7 19v-1.2c0-1.4 1.1-2.5 2.5-2.5h5c1.4 0 2.5 1.1 2.5 2.5V19H7z"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- Command Palette (Ctrl/Cmd + K) -->
+  <div id="command-palette" aria-hidden="true">
+    <div class="cmdk-modal">
+      <input type="text" id="cmdk-input" placeholder="Type to search: About, Projects, Stats, Contact..." aria-label="Command Palette">
+      <ul id="cmdk-results"></ul>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 "VISHVANSHU CHAUHAN" All rights reserved.
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
