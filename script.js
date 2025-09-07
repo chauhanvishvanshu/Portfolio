@@ -1,5 +1,5 @@
 // ===== CONFIG ===== 
-const GITHUB_USERNAME = 'your-github-username'; // <--- SET THIS to your GitHub handle
+const GITHUB_USERNAME = 'chauhanvishvanshu'; // set to your GitHub handle
 const EMAILJS_PUBLIC_KEY = 'YOUR_EMAILJS_PUBLIC_KEY'; // <--- replace
 const EMAILJS_SERVICE_ID = 'YOUR_SERVICE_ID';         // <--- replace
 const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';       // <--- replace
@@ -199,7 +199,9 @@ const cmdkBtn = document.getElementById('cmdk-btn');
 const paletteItems = [
   { label: 'About', target: '#about' },
   { label: 'Projects', target: '#projects' },
+  { label: 'Skills', target: '#skills' },
   { label: 'Stats', target: '#stats' },
+  { label: 'Connect', target: '#connect' },
   { label: 'Contact', target: '#contact' },
 ];
 
@@ -268,7 +270,7 @@ if (form) {
 
 // ===== GitHub API Live Stats =====
 async function loadGitHubStats(username) {
-  if (!username || username === 'https://github.com/chauhanvishvanshu') return;
+  if (!username) return;
   try {
     const userRes = await fetch(`https://api.github.com/users/${username}`);
     if (!userRes.ok) throw new Error('GitHub user fetch failed');
@@ -284,3 +286,43 @@ async function loadGitHubStats(username) {
   }
 }
 loadGitHubStats(GITHUB_USERNAME);
+
+// ===== Animate skill bars with counting numbers =====
+const skillBars = document.querySelectorAll('.skill-progress');
+
+if (skillBars.length) {
+  const skillObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+        const levelStr = el.style.getPropertyValue('--level').trim();
+        const level = parseInt(levelStr) || 0;
+        const percentEl = el.querySelector('.skill-percent');
+
+        // Animate width
+        el.style.width = `${level}%`;
+
+        // Animate number count
+        let current = 0;
+        const steps = 30;
+        const increment = Math.max(1, Math.round(level / steps));
+        const timer = setInterval(() => {
+          current += increment;
+          if (current >= level) {
+            current = level;
+            clearInterval(timer);
+          }
+          if (percentEl) {
+            percentEl.textContent = current + "%";
+            percentEl.style.opacity = 1;
+            percentEl.style.transform = "translateY(0)";
+          }
+        }, 30);
+
+        observer.unobserve(el); // run only once
+      }
+    });
+  }, { threshold: 0.5 });
+
+  skillBars.forEach(bar => skillObserver.observe(bar));
+}

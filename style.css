@@ -58,7 +58,7 @@ body {
 }
 @keyframes gradientBG { 0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%} }
 
-/* Performance safeguard: reduce particle visuals on small screens */
+/* Performance safeguard */
 @media (max-width: 768px) {
   .particle { box-shadow: none; opacity: 0.5; animation-duration: 16s !important; }
 }
@@ -137,25 +137,19 @@ header {
   align-items: center;
 }
 
-/* ====== NAVBAR CSS-ONLY FIXES ====== */
-
-/* Hide hamburger on desktop (default) */
+/* NAVBAR CSS-ONLY FIXES */
 .menu-toggle {
   display: none;
   cursor: pointer;
   font-size: 1.5rem;
   color: #2a2a2a;
 }
-
-/* keep nav-links default layout for desktop */
 .nav-links {
   list-style: none;
   display: flex;
   gap: 12px;
   align-items: center;
 }
-
-/* existing HUD styling retained */
 .navbar.hud {
   border: 1px solid #cfe7ff80;
   box-shadow: 0 0 0 1px #ffffff80 inset, 0 0 12px #0ff6, 0 0 24px #f0f6;
@@ -195,8 +189,6 @@ header {
   box-shadow: 6px 6px 18px #c2c7cf, -6px -6px 18px #fff, 0 0 10px #00fff7;
 }
 
-/* NOTE: Neon active link styling intentionally NOT added (per your request) */
-
 /* Hero Section */
 .hero {
   min-height: 92vh;
@@ -230,7 +222,6 @@ header {
   mix-blend-mode: screen;
   pointer-events: none;
 }
-/* responsive headline sizing and word-break to avoid overflow */
 .hero h1 {
   font-size: clamp(2.4rem,5.5vw,3.8rem);
   font-weight: 800;
@@ -254,7 +245,6 @@ header {
   animation: glowPulse 2s ease-in-out infinite alternate;
 }
 .hero .hero-actions { display:flex; gap:12px; flex-wrap: wrap; justify-content:center; }
-/* ensure scroll indicator doesn't overlap hero content on small devices */
 .scroll-indicator {
   position: absolute;
   bottom: 18px;
@@ -272,7 +262,7 @@ header {
 }
 @keyframes floaty { 0%,100%{transform:translate(-50%,0)} 50%{transform:translate(-50%,-6px)} }
 
-/* Buttons (incl. magnetic base) */
+/* Buttons */
 .btn {
   margin-top: 14px;
   padding: 14px 22px;
@@ -432,7 +422,7 @@ input:focus, textarea:focus {
 textarea { resize: none; min-height: 130px; }
 .form-status { margin-top: 8px; min-height: 20px; display: block; }
 
-/* Social Icons */
+/* Social Icons (footer/contact) */
 .social-icons {
   display: flex;
   justify-content: center;
@@ -516,7 +506,6 @@ footer a { color: inherit; }
   z-index: 1500;
 }
 #command-palette.show { display: grid; place-items: start center; padding-top: 12vh; }
-/* dim background via pseudo-element to avoid interfering with existing markup */
 #command-palette::before {
   content: "";
   position: fixed;
@@ -546,7 +535,7 @@ footer a { color: inherit; }
 #cmdk-results li { padding: 10px 12px; border-radius: 10px; cursor: pointer; }
 #cmdk-results li:hover { background: #e8edf7; box-shadow: inset 0 0 0 2px #0ff7; }
 
-/* Magnetic hover helper (no layout change) */
+/* Magnetic hover helper */
 .magnetic { will-change: transform; }
 
 /* Animations */
@@ -558,20 +547,9 @@ footer a { color: inherit; }
 }
 
 /* Responsive */
-
-/* hide timeline earlier on smaller screens to avoid overlap */
-@media (max-width: 992px) {
-  .timeline { display: none; }
-}
-
-/* Mobile nav UX improvements (CSS-only):
-   - Hide hamburger on desktop (done above)
-   - Smooth show/hide (opacity/transform) instead of toggling display
-   - Add full-screen translucent overlay via pseudo-element when nav is open
-*/
+@media (max-width: 992px) { .timeline { display: none; } }
 @media (max-width:768px) {
   .nav-links {
-    /* keep layout for transitions (don't use display:none so we can animate) */
     flex-direction: column;
     gap: 12px;
     background: rgba(255,255,255,0.95);
@@ -581,41 +559,145 @@ footer a { color: inherit; }
     padding: 20px;
     border-radius: 15px;
     box-shadow: 6px 6px 15px #c5c9ce,-6px -6px 15px #fff;
-
-    /* transition-friendly hidden state */
     opacity: 0;
     transform: translateY(-8px) scale(0.99);
     pointer-events: none;
     transition: opacity 220ms ease, transform 220ms ease;
-    z-index: 1100; /* ensure on top of page, but under loader (z=2000) */
+    z-index: 1100;
   }
-
-  /* When JS toggles .show, we reveal the mobile menu smoothly */
   .nav-links.show {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-    pointer-events: auto;
+    opacity: 1; transform: translateY(0) scale(1); pointer-events: auto;
   }
-
-  /* full-screen translucent overlay behind the menu (CSS-only) */
   .nav-links.show::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.35);
-    z-index: 1090; /* under the nav-links panel but above page */
-    pointer-events: auto;
+    content: ""; position: fixed; inset: 0; background: rgba(0,0,0,0.35); z-index: 1090; pointer-events: auto;
   }
-
   .nav-links li { width: 100%; display: flex; justify-content: center; }
-
   .menu-toggle { display: block; cursor: pointer; font-size: 1.5rem; color: #2a2a2a; }
-
   .hero h1 { font-size: 2.4rem; }
   .hero h2 { font-size: 1rem; }
 }
+@media (hover: none) { .holo-avatar { transform: none !important; } }
 
-/* mobile-friendly avatar - disable tilt on touch devices */
-@media (hover: none) {
-  .holo-avatar { transform: none !important; }
+/* =========================
+   SKILLS
+   ========================= */
+.skills-section { max-width: 980px; margin: 0 auto; }
+.skill-category { margin: 28px auto 36px; text-align: left; }
+.skill-category h3 {
+  font-size: 1.25rem; margin-bottom: 14px; color: #00aab3; font-weight: 800;
+  display: inline-block; padding-bottom: 4px; border-bottom: 2px solid rgba(0,255,255,0.35);
+}
+.skill { margin: 14px 0; }
+.skill-name {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-weight: 700; color: #222; margin-bottom: 8px;
+}
+.skill-name i { font-size: 1.1rem; }
+.skill-bar {
+  width: 100%;
+  background: #e6ebf3;
+  box-shadow: inset 3px 3px 6px #c0c4ca, inset -3px -3px 6px #fff;
+  border-radius: 10px;
+  height: 14px;
+  overflow: hidden;
+  position: relative;
+}
+.skill-progress {
+  position: relative;
+  height: 100%;
+  width: 0; /* animated to --level in JS */
+  border-radius: 8px;
+  transition: width 1.3s ease-in-out;
+}
+.skill-percent {
+  position: absolute;
+  top: -22px;
+  right: 0;
+  font-size: 0.8rem;
+  font-weight: 700;
+  background: #111;
+  color: #fff;
+  padding: 2px 6px;
+  border-radius: 6px;
+  opacity: 0;
+  transform: translateY(5px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.skill-percent::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  right: 8px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #111 transparent transparent transparent;
+}
+
+/* Per-skill gradients */
+.skill-progress.html     { background: linear-gradient(90deg,#ff7e5f,#feb47b); }
+.skill-progress.css      { background: linear-gradient(90deg,#36d1dc,#5b86e5); }
+.skill-progress.js       { background: linear-gradient(90deg,#f7df1e,#ff9800); }
+.skill-progress.react    { background: linear-gradient(90deg,#61dafb,#007acc); }
+.skill-progress.node     { background: linear-gradient(90deg,#3cba54,#0ba360); }
+.skill-progress.express  { background: linear-gradient(90deg,#606c88,#3f4c6b); }
+.skill-progress.mongodb  { background: linear-gradient(90deg,#2ecc71,#27ae60); }
+.skill-progress.python   { background: linear-gradient(90deg,#3776ab,#4b8bbe); }
+.skill-progress.cpp      { background: linear-gradient(90deg,#00599c,#2a73b7); }
+.skill-progress.java     { background: linear-gradient(90deg,#ea4335,#ff6b6b); }
+.skill-progress.c        { background: linear-gradient(90deg,#0f9b0f,#36d1dc); }
+.skill-progress.git      { background: linear-gradient(90deg,#f4511e,#ff7043); }
+.skill-progress.linux    { background: linear-gradient(90deg,#2c3e50,#4ca1af); }
+.skill-progress.docker   { background: linear-gradient(90deg,#0db7ed,#1d8bd1); }
+.skill-progress.vscode   { background: linear-gradient(90deg,#0078d7,#00a4ef); }
+.skill-progress.netlify  { background: linear-gradient(90deg,#00ad9f,#00e6c3); }
+.skill-progress.discord  { background: linear-gradient(90deg,#5865f2,#8ea1e1); }
+
+/* Knowledge badges */
+.knowledge-badges {
+  display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px;
+}
+.knowledge-badges a { text-decoration: none; color: #fff; }
+.badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 6px 14px; border-radius: 20px; font-size: 0.9rem; font-weight: 700;
+  background: #444; box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+  transition: transform .3s ease, opacity .3s ease;
+}
+.badge:hover { transform: translateY(-3px) scale(1.05); opacity: .95; }
+.badge i { margin-right: 2px; }
+.badge.intermediate { background: #ff9800; }
+.badge.advanced { background: #4caf50; }
+
+/* =========================
+   CONNECT WITH ME
+   ========================= */
+#connect { }
+.connect-group { max-width: 1000px; margin: 0 auto 28px; text-align: left; }
+.connect-group h3 {
+  font-size: 1.1rem; letter-spacing: .5px; color: #006a70;
+  margin-bottom: 10px; font-weight: 800; text-transform: uppercase;
+}
+.connect-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 14px;
+}
+.connect-card {
+  display: flex; align-items: center; gap: 10px;
+  padding: 14px 16px; border-radius: 14px; text-decoration: none; color: #111;
+  background: #e6ebf3;
+  box-shadow: 6px 6px 14px #c8ccd2, -6px -6px 14px #fff;
+  transition: transform .25s ease, box-shadow .25s ease, color .25s ease;
+}
+.connect-card i { font-size: 1.2rem; }
+.connect-card:hover {
+  transform: translateY(-4px);
+  color: #000;
+  box-shadow: 8px 8px 20px #b8bcc2, -8px -8px 20px #fff, 0 0 12px #00fff7;
+}
+.connect-note { margin-top: 18px; color: #666; font-size: 0.9rem; }
+
+/* Mobile tweaks */
+@media (max-width: 560px) {
+  .skill-percent { top: -26px; font-size: .78rem; }
 }
