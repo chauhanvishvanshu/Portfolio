@@ -2,14 +2,19 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="google-site-verification" content="oyr0PMwzZUhSEASfn4PmKKvE0ji3RGRhfD-NYRCys_c" />
-  <title>Your Name | Portfolio</title>
-  <meta name="description" content="Vishvanshu Chauhan - Frontend Developer | Designer | Projects & Portfolio">
-  <meta name="keywords" content="Vishvanshu Chauhan, Portfolio, Developer, Designer, Projects">
+  <title>Vishvanshu Chauhan | Portfolio</title>
+  <meta name="description" content="Vishvanshu Chauhan - Frontend & Fullstack Developer | Designer | AI Enthusiast | Projects & Portfolio">
+  <meta name="keywords" content="Vishvanshu Chauhan, Portfolio, Developer, Designer, Projects, AI, Game Dev">
   <meta name="author" content="Vishvanshu Chauhan">
 
-  <title>Vishvanshu Chauhan — Neon Portfolio</title>
+  <!-- Open Graph / Social Media -->
+  <meta property="og:title" content="Vishvanshu Chauhan | Portfolio" />
+  <meta property="og:description" content="Frontend & Fullstack Developer, AI Enthusiast, Game Developer. Explore my projects and portfolio." />
+  <meta property="og:image" content="assets/Vishvanshu.png" />
+  <meta property="og:url" content="https://vishvanshufolio.netlify.app" />
+  <meta name="twitter:card" content="summary_large_image" />
 
   <!-- Styles -->
   <link rel="stylesheet" href="style.css" />
@@ -18,24 +23,26 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 
-  <!-- EmailJS (replace your user ID in script.js init) -->
-   <script type="application/ld+json">
-{
-  "@type": "Person",
-  "name": "Vishvanshu Chauhan",
-  "url": "https://vishvanshufolio.netlify.app",
-  "sameAs": [
-    "https://www.linkedin.com/in/vishvanshu-chauhan",
-    "https://www.instagram.com/vishvanshu_chauhan",
-    "https://github.com/chauhanvishvanshu"
-  ]
-}
-</script>
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Vishvanshu Chauhan",
+    "url": "https://vishvanshufolio.netlify.app",
+    "sameAs": [
+      "https://www.linkedin.com/in/vishvanshu-chauhan",
+      "https://www.instagram.com/vishvanshu_chauhan",
+      "https://github.com/chauhanvishvanshu"
+    ]
+  }
+  </script>
 
+  <!-- EmailJS SDK -->
   <script src="https://cdn.emailjs.com/sdk/3.11.0/email.min.js"></script>
 </head>
 <body>
-  <!-- ====== 0) Cyberpunk Loading Screen ====== -->
+  <!-- ====== Loader ====== -->
   <div id="loader" aria-hidden="true">
     <div class="loader-inner">
       <div class="scanline"></div>
@@ -54,7 +61,7 @@
   <!-- Particles Background -->
   <div class="particles-container" aria-hidden="true"></div>
 
-  <!-- Neon Timeline Path (fixed left) -->
+  <!-- Neon Timeline Path -->
   <aside class="timeline" aria-hidden="true">
     <a href="#about" class="dot" data-target="about" title="About"></a>
     <a href="#projects" class="dot" data-target="projects" title="Projects"></a>
@@ -64,18 +71,15 @@
     <a href="#contact" class="dot" data-target="contact" title="Contact"></a>
   </aside>
 
-  <!-- Navbar (HUD-style) -->
+  <!-- Navbar -->
   <header>
-    <div class="navbar hud">
+    <nav class="navbar hud" role="navigation" aria-label="Main Navigation">
       <div class="logo">Vishufolio</div>
-
-      <!-- accessible button for menu -->
       <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
         <span class="bar" aria-hidden="true"></span>
         <span class="bar" aria-hidden="true"></span>
         <span class="bar" aria-hidden="true"></span>
       </button>
-
       <ul class="nav-links" role="menu">
         <li role="none"><a role="menuitem" href="#about">About</a></li>
         <li role="none"><a role="menuitem" href="#projects">Projects</a></li>
@@ -85,36 +89,32 @@
         <li role="none"><a role="menuitem" href="#contact">Contact</a></li>
         <li role="none"><button id="cmdk-btn" class="btn micro magnetic" type="button" aria-label="Command Palette (Ctrl+K)">⌘</button></li>
       </ul>
-    </div>
+    </nav>
   </header>
 
   <!-- Hero Section -->
   <section class="hero" id="home" aria-label="Home">
     <div class="holo-wrap">
       <div class="holo-avatar magnetic" aria-hidden="true">
-        <img src="assets\Vishvanshu.png" alt="Holographic avatar" />
+        <img src="assets/Vishvanshu.png" alt="Holographic avatar of Vishvanshu Chauhan" />
         <div class="holo-overlay"></div>
       </div>
     </div>
-
     <h1>Hi, I'm <span class="highlight">VISHVANSHU CHAUHAN</span></h1>
     <h2>Fullstack Developer • AI Enthusiast • Game Dev</h2>
-
     <div class="hero-actions">
       <a href="#projects" class="btn magnetic">View Projects</a>
-      <a href="assets\Vishvanshu_resume.pdf" class="btn outline magnetic" download>Download CV</a>
+      <a href="assets/Vishvanshu_resume.pdf" class="btn outline magnetic" download>Download CV</a>
     </div>
-
     <div class="hero-meta">
       <div class="meta-item">GL Bajaj Institute (B.Tech - CSE AI)</div>
       <div class="meta-item">Diploma CSE — Teerthanker Mahaveer University</div>
       <div class="meta-item">Smart India Hackathon 2025 — Participant</div>
     </div>
-
     <div class="scroll-indicator" aria-hidden="true">Scroll</div>
   </section>
 
-  <!-- About -->
+  <!-- About Section -->
   <section id="about" class="about" data-section="about" aria-labelledby="about-heading">
     <h2 id="about-heading">About Me</h2>
     <p>
@@ -129,7 +129,7 @@
     </div>
   </section>
 
-  <!-- Projects -->
+  <!-- Projects Section -->
   <section id="projects" data-section="projects" aria-labelledby="projects-heading">
     <h2 id="projects-heading">Projects</h2>
     <div class="project-grid">
@@ -138,31 +138,26 @@
         <p>Mock interview web app — frontend built with HTML/CSS/JS. Helps practice common interview questions and records answers for review.</p>
         <div class="project-tags"><span>Web</span><span>JavaScript</span><span>UX</span></div>
       </article>
-
       <article class="project-card magnetic" tabindex="0">
         <h3>Voice Assistant — Manya</h3>
         <p>Python-based voice assistant with speech recognition, simple NLP commands and system integrations for common tasks.</p>
         <div class="project-tags"><span>Python</span><span>Speech</span><span>AI</span></div>
       </article>
-
       <article class="project-card magnetic" tabindex="0">
         <h3>E-Exam Application</h3>
         <p>Desktop exam system implemented with Java (AWT/Swing) + SQL backend — built during diploma internship to manage tests & results.</p>
         <div class="project-tags"><span>Java</span><span>SQL</span><span>Desktop</span></div>
       </article>
-
       <article class="project-card magnetic" tabindex="0">
         <h3>Aayudhm (Game)</h3>
         <p>2D action game made with Godot; pixel art created in Aseprite. Focus on gameplay feel and level design.</p>
         <div class="project-tags"><span>Godot</span><span>GameDev</span><span>Aseprite</span></div>
       </article>
-
       <article class="project-card magnetic" tabindex="0">
         <h3>Wish Website</h3>
         <p>Portfolio / small e-commerce style website built with HTML/CSS/JavaScript during diploma — responsive layout, basic JS interactions.</p>
         <div class="project-tags"><span>HTML</span><span>CSS</span><span>Responsive</span></div>
       </article>
-
       <article class="project-card magnetic" tabindex="0">
         <h3>Online Voting Machine</h3>
         <p>University-level C project simulating secure voting flows and tallying. Focused on correctness and UX for terminals.</p>
@@ -171,177 +166,60 @@
     </div>
   </section>
 
-  <!-- Skills -->
+  <!-- Skills Section -->
   <section id="skills" class="skills-section" aria-labelledby="skills-heading">
     <h2 id="skills-heading">My Skills</h2>
 
     <!-- Frontend -->
     <div class="skill-category">
       <h3>Frontend</h3>
-
-      <div class="skill">
-        <span class="skill-name"><i class="devicon-html5-plain colored"></i> HTML</span>
-        <div class="skill-bar">
-          <div class="skill-progress html" style="--level: 95%"><span class="skill-percent">95%</span></div>
-        </div>
-      </div>
-
-      <div class="skill">
-        <span class="skill-name"><i class="devicon-css3-plain colored"></i> CSS</span>
-        <div class="skill-bar">
-          <div class="skill-progress css" style="--level: 90%"><span class="skill-percent">90%</span></div>
-        </div>
-      </div>
-
-      <div class="skill">
-        <span class="skill-name"><i class="devicon-javascript-plain colored"></i> JavaScript</span>
-        <div class="skill-bar">
-          <div class="skill-progress js" style="--level: 85%"><span class="skill-percent">85%</span></div>
-        </div>
-      </div>
-
-      <div class="skill">
-        <span class="skill-name"><i class="devicon-react-original colored"></i> React.js</span>
-        <div class="skill-bar">
-          <div class="skill-progress react" style="--level: 80%"><span class="skill-percent">80%</span></div>
-        </div>
-      </div>
+      <div class="skill"><span class="skill-name"><i class="devicon-html5-plain colored"></i> HTML</span><div class="skill-bar"><div class="skill-progress html" style="--level: 95%"><span class="skill-percent">95%</span></div></div></div>
+      <div class="skill"><span class="skill-name"><i class="devicon-css3-plain colored"></i> CSS</span><div class="skill-bar"><div class="skill-progress css" style="--level: 90%"><span class="skill-percent">90%</span></div></div></div>
+      <div class="skill"><span class="skill-name"><i class="devicon-javascript-plain colored"></i> JavaScript</span><div class="skill-bar"><div class="skill-progress js" style="--level: 85%"><span class="skill-percent">85%</span></div></div></div>
+      <div class="skill"><span class="skill-name"><i class="devicon-react-original colored"></i> React.js</span><div class="skill-bar"><div class="skill-progress react" style="--level: 80%"><span class="skill-percent">80%</span></div></div></div>
     </div>
 
     <!-- Backend -->
     <div class="skill-category">
       <h3>Backend</h3>
-
-      <div class="skill">
-        <span class="skill-name"><i class="devicon-nodejs-plain colored"></i> Node.js</span>
-        <div class="skill-bar">
-          <div class="skill-progress node" style="--level: 75%"><span class="skill-percent">75%</span></div>
-        </div>
-      </div>
-
-      <div class="skill">
-        <span class="skill-name"><i class="devicon-express-original"></i> Express.js</span>
-        <div class="skill-bar">
-          <div class="skill-progress express" style="--level: 70%"><span class="skill-percent">70%</span></div>
-        </div>
-      </div>
-
-      <div class="skill">
-        <span class="skill-name"><i class="devicon-mongodb-plain colored"></i> MongoDB</span>
-        <div class="skill-bar">
-          <div class="skill-progress mongodb" style="--level: 65%"><span class="skill-percent">65%</span></div>
-        </div>
-      </div>
+      <div class="skill"><span class="skill-name"><i class="devicon-nodejs-plain colored"></i> Node.js</span><div class="skill-bar"><div class="skill-progress node" style="--level: 75%"><span class="skill-percent">75%</span></div></div></div>
+      <div class="skill"><span class="skill-name"><i class="devicon-express-original"></i> Express.js</span><div class="skill-bar"><div class="skill-progress express" style="--level: 70%"><span class="skill-percent">70%</span></div></div></div>
+      <div class="skill"><span class="skill-name"><i class="devicon-mongodb-plain colored"></i> MongoDB</span><div class="skill-bar"><div class="skill-progress mongodb" style="--level: 65%"><span class="skill-percent">65%</span></div></div></div>
     </div>
 
     <!-- Programming Languages -->
     <div class="skill-category">
       <h3>Programming Languages</h3>
-
-      <div class="skill">
-        <span class="skill-name"><i class="devicon-python-plain colored"></i> Python</span>
-        <div class="skill-bar">
-          <div class="skill-progress python" style="--level: 90%"><span class="skill-percent">90%</span></div>
-        </div>
-      </div>
-
-      <div class="skill">
-        <span class="skill-name"><i class="devicon-cplusplus-plain colored"></i> C++</span>
-        <div class="skill-bar">
-          <div class="skill-progress cpp" style="--level: 85%"><span class="skill-percent">85%</span></div>
-        </div>
-      </div>
-
-      <div class="skill">
-        <span class="skill-name"><i class="devicon-java-plain colored"></i> Java</span>
-        <div class="skill-bar">
-          <div class="skill-progress java" style="--level: 75%"><span class="skill-percent">75%</span></div>
-        </div>
-      </div>
-
-      <div class="skill">
-        <span class="skill-name"><i class="devicon-c-plain colored"></i> C</span>
-        <div class="skill-bar">
-          <div class="skill-progress c" style="--level: 80%"><span class="skill-percent">80%</span></div>
-        </div>
-      </div>
+      <div class="skill"><span class="skill-name"><i class="devicon-python-plain colored"></i> Python</span><div class="skill-bar"><div class="skill-progress python" style="--level: 90%"><span class="skill-percent">90%</span></div></div></div>
+      <div class="skill"><span class="skill-name"><i class="devicon-cplusplus-plain colored"></i> C++</span><div class="skill-bar"><div class="skill-progress cpp" style="--level: 85%"><span class="skill-percent">85%</span></div></div></div>
+      <div class="skill"><span class="skill-name"><i class="devicon-java-plain colored"></i> Java</span><div class="skill-bar"><div class="skill-progress java" style="--level: 75%"><span class="skill-percent">75%</span></div></div></div>
+      <div class="skill"><span class="skill-name"><i class="devicon-c-plain colored"></i> C</span><div class="skill-bar"><div class="skill-progress c" style="--level: 80%"><span class="skill-percent">80%</span></div></div></div>
     </div>
 
     <!-- Tools & Platforms -->
     <div class="skill-category">
       <h3>Tools & Platforms</h3>
-
-      <div class="skill">
-        <span class="skill-name"><i class="devicon-git-plain colored"></i> Git & GitHub</span>
-        <div class="skill-bar">
-          <div class="skill-progress git" style="--level: 85%"><span class="skill-percent">85%</span></div>
-        </div>
-      </div>
-
-      <div class="skill">
-        <span class="skill-name"><i class="devicon-linux-plain"></i> Linux</span>
-        <div class="skill-bar">
-          <div class="skill-progress linux" style="--level: 70%"><span class="skill-percent">70%</span></div>
-        </div>
-      </div>
-
-      <div class="skill">
-        <span class="skill-name"><i class="devicon-docker-plain colored"></i> Docker</span>
-        <div class="skill-bar">
-          <div class="skill-progress docker" style="--level: 60%"><span class="skill-percent">60%</span></div>
-        </div>
-      </div>
-
-      <div class="skill">
-        <span class="skill-name"><i class="devicon-vscode-plain colored"></i> VS Code</span>
-        <div class="skill-bar">
-          <div class="skill-progress vscode" style="--level: 95%"><span class="skill-percent">95%</span></div>
-        </div>
-      </div>
-
-      <div class="skill">
-        <span class="skill-name"><i class="devicon-netlify-plain colored"></i> Netlify</span>
-        <div class="skill-bar">
-          <div class="skill-progress netlify" style="--level: 80%"><span class="skill-percent">80%</span></div>
-        </div>
-      </div>
-
-      <div class="skill">
-        <span class="skill-name"><i class="fa-brands fa-discord"></i> Discord</span>
-        <div class="skill-bar">
-          <div class="skill-progress discord" style="--level: 85%"><span class="skill-percent">85%</span></div>
-        </div>
-      </div>
+      <div class="skill"><span class="skill-name"><i class="devicon-git-plain colored"></i> Git & GitHub</span><div class="skill-bar"><div class="skill-progress git" style="--level: 85%"><span class="skill-percent">85%</span></div></div></div>
+      <div class="skill"><span class="skill-name"><i class="devicon-linux-plain"></i> Linux</span><div class="skill-bar"><div class="skill-progress linux" style="--level: 70%"><span class="skill-percent">70%</span></div></div></div>
+      <div class="skill"><span class="skill-name"><i class="devicon-docker-plain colored"></i> Docker</span><div class="skill-bar"><div class="skill-progress docker" style="--level: 60%"><span class="skill-percent">60%</span></div></div></div>
+      <div class="skill"><span class="skill-name"><i class="devicon-vscode-plain colored"></i> VS Code</span><div class="skill-bar"><div class="skill-progress vscode" style="--level: 95%"><span class="skill-percent">95%</span></div></div></div>
+      <div class="skill"><span class="skill-name"><i class="devicon-netlify-plain colored"></i> Netlify</span><div class="skill-bar"><div class="skill-progress netlify" style="--level: 80%"><span class="skill-percent">80%</span></div></div></div>
+      <div class="skill"><span class="skill-name"><i class="fa-brands fa-discord"></i> Discord</span><div class="skill-bar"><div class="skill-progress discord" style="--level: 85%"><span class="skill-percent">85%</span></div></div></div>
     </div>
 
-    <!-- CS Fundamentals (Badges w/ icons & links) -->
+    <!-- CS Fundamentals Badges -->
     <div class="skill-category">
       <h3>Computer Science Fundamentals</h3>
-
       <div class="knowledge-badges">
-        <a href="https://www.geeksforgeeks.org/computer-organization-and-architecture-tutorials/" target="_blank" class="badge intermediate">
-          <i class="fas fa-microchip"></i> COA
-        </a>
-        <a href="https://www.geeksforgeeks.org/operating-systems/" target="_blank" class="badge advanced">
-          <i class="fas fa-cogs"></i> Operating Systems
-        </a>
-        <a href="https://www.javatpoint.com/digital-electronics" target="_blank" class="badge intermediate">
-          <i class="fas fa-project-diagram"></i> Digital Logic
-        </a>
-        <a href="https://www.geeksforgeeks.org/object-oriented-programming-oops-concept-in-java/" target="_blank" class="badge advanced">
-          <i class="fas fa-code"></i> OOPs
-        </a>
-        <a href="https://leetcode.com/explore/learn/card/data-structure-and-algorithm/" target="_blank" class="badge advanced">
-          <i class="fas fa-database"></i> DSA
-        </a>
-        <a href="https://www.geeksforgeeks.org/dbms/" target="_blank" class="badge intermediate">
-          <i class="fas fa-server"></i> DBMS
-        </a>
+        <a href="https://www.geeksforgeeks.org/fundamentals-of-algorithms/" target="_blank" class="badge" aria-label="Algorithms Badge">Algorithms</a>
+        <a href="https://www.geeksforgeeks.org/data-structures/" target="_blank" class="badge" aria-label="Data Structures Badge">Data Structures</a>
+        <a href="https://www.geeksforgeeks.org/object-oriented-programming-oops-concept-in-java/" target="_blank" class="badge" aria-label="OOP Badge">OOP</a>
+        <a href="https://www.geeksforgeeks.org/dbms-tutorial/" target="_blank" class="badge" aria-label="Database Badge">Database</a>
+        <a href="https://www.geeksforgeeks.org/software-engineering/" target="_blank" class="badge" aria-label="Software Engineering Badge">Software Engg</a>
       </div>
     </div>
   </section>
-
-  <!-- Live GitHub Stats -->
+  <!-- GitHub & Stats Section -->
   <section id="stats" data-section="stats" aria-labelledby="stats-heading">
     <h2 id="stats-heading">GitHub & Stats</h2>
     <div class="stats-grid">
@@ -360,7 +238,7 @@
     </div>
   </section>
 
-  <!-- Connect with Me -->
+  <!-- Connect Section -->
   <section id="connect" data-section="connect" aria-labelledby="connect-heading">
     <h2 id="connect-heading">Connect with Me</h2>
 
@@ -372,7 +250,7 @@
           <i class="fa-brands fa-instagram"></i><span>Instagram</span>
         </a>
         <a class="connect-card magnetic" href="https://x.com/vishvanshu_" target="_blank" aria-label="X (Twitter)">
-          <i class="fa-brands fa-x-twitter"></i><span>X (Twitter)</span>
+          <i class="fa-brands fa-x-twitter"></i><span>X</span>
         </a>
         <a class="connect-card magnetic" href="https://www.linkedin.com/in/vishvanshu-chauhan/" target="_blank" aria-label="LinkedIn">
           <i class="fa-brands fa-linkedin"></i><span>LinkedIn</span>
@@ -421,7 +299,7 @@
       </div>
     </div>
 
-    <!-- Dev / Hosting -->
+    <!-- Developer / Hosting -->
     <div class="connect-group">
       <h3>Developer / Hosting</h3>
       <div class="connect-grid">
@@ -437,7 +315,7 @@
     <p class="connect-note">Tip: Replace placeholder links (e.g., Telegram, Discord ID) with your actual usernames.</p>
   </section>
 
-  <!-- Contact -->
+  <!-- Contact Section -->
   <section id="contact" data-section="contact" aria-labelledby="contact-heading">
     <h2 id="contact-heading">Contact Me</h2>
     <form id="contact-form" aria-label="Contact form">
@@ -450,21 +328,21 @@
 
     <div class="social-icons" aria-label="Social links">
       <a href="https://github.com/chauhanvishvanshu" class="social-icon magnetic" aria-label="GitHub" title="GitHub">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303..."></path></svg>
+        <i class="fa-brands fa-github"></i>
       </a>
       <a href="https://www.linkedin.com/in/vishvanshu-chauhan/" class="social-icon magnetic" aria-label="LinkedIn" title="LinkedIn">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.9 6 2.5 6S0 4.88 0 3.5 1.1 1 2.5 1 4.98 2.12 4.98 3.5zM.2 24h4.6V7.98H.2V24zM8.5 24h4.4v-8.5c0-4.8 6.4-5.2 6.4 0V24h4.4V13.2c0-10.3-11.2-9.9-15.2-4.8V7.98H8.5V24z"/></svg>
+        <i class="fa-brands fa-linkedin"></i>
       </a>
       <a href="https://x.com/vishvanshu_" class="social-icon magnetic" aria-label="Twitter" title="Twitter">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 4.56c-.89.39-1.84.65-2.84.77 1.02-.61 1.8-1.57 2.17-2.72-.96.57-2.03.98-3.17 1.2C18.4 2.9 17.1 2 15.6 2c-2.65 0-4.8 2.15-4.8 4.8 0 .38.04.75.12 1.11C6.7 7.78 3.58 5.9 1.64 3.1c-.42.72-.66 1.56-.66 2.45 0 1.69.86 3.18 2.17 4.05-.8-.02-1.56-.25-2.22-.62v.06c0 2.35 1.67 4.32 3.89 4.77-.41.11-.84.17-1.29.17-.31 0-.62-.03-.92-.09.62 1.93 2.43 3.34 4.57 3.38-1.67 1.31-3.77 2.09-6.05 2.09-.39 0-.78-.02-1.16-.07 2.17 1.39 4.75 2.2 7.52 2.2 9.03 0 13.98-7.48 13.98-13.98 0-.21 0-.42-.02-.63.96-.69 1.8-1.56 2.46-2.55z"/></svg>
+        <i class="fa-brands fa-x-twitter"></i>
       </a>
       <a href="https://www.instagram.com/vishvanshu_chauhan/" class="social-icon magnetic" aria-label="Instagram" title="Instagram">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 2C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 5-5V7c0-2.76-2.24-5-5-5H7zm8 3a1 1 0 110 2 1 1 0 010-2zM12 7.9A4.1 4.1 0 1012 16a4.1 4.1 0 000-8.1zM7 19v-1.2c0-1.4 1.1-2.5 2.5-2.5h5c1.4 0 2.5 1.1 2.5 2.5V19H7z"/></svg>
+        <i class="fa-brands fa-instagram"></i>
       </a>
     </div>
   </section>
 
-  <!-- Command Palette (Ctrl/Cmd + K) -->
+  <!-- Command Palette -->
   <div id="command-palette" aria-hidden="true">
     <div class="cmdk-modal">
       <input type="text" id="cmdk-input" placeholder="Type to search: About, Projects, Skills, Stats, Connect, Contact..." aria-label="Command Palette">
@@ -474,9 +352,10 @@
 
   <!-- Footer -->
   <footer>
-    &copy; 2025 "VISHVANSHU CHAUHAN" All rights reserved.
+    &copy; 2025 Vishvanshu Chauhan. All rights reserved.
   </footer>
 
   <script src="script.js"></script>
+  
 </body>
 </html>
