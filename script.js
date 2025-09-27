@@ -48,7 +48,7 @@ if (menuToggle && navLinks) {
 
 // ===== PARTICLES =====
 const particlesContainer = document.querySelector('.particles-container');
-const particlesCount = 40;
+const particlesCount = 32;
 if (particlesContainer) {
   const isSmall = window.matchMedia('(max-width:768px)').matches;
   const count = isSmall ? Math.max(8, Math.floor(particlesCount / 4)) : particlesCount;
@@ -105,7 +105,7 @@ projectCards.forEach(card => {
 // ===== LOADER FADE =====
 window.addEventListener('load', () => {
   const loader = document.getElementById('loader');
-  if (loader) setTimeout(() => loader.classList.add('hidden'), 1100);
+  if (loader) setTimeout(() => loader.classList.add('hidden'), 800);
 });
 
 // ===== TIMELINE =====
@@ -205,7 +205,7 @@ function renderResults(items) {
   });
 }
 window.addEventListener('keydown', e => {
-  if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') {
+  if ((e.ctrlKey || e.metaKey) && (e.key === 'k' || e.key === 'K')) {
     e.preventDefault();
     cmdk?.classList.contains('show') ? closePalette() : openPalette();
   } else if (e.key === 'Escape') closePalette();
@@ -230,6 +230,7 @@ if (form) {
       message: document.getElementById('message').value,
     };
     try {
+      // basic validation
       if (!window.emailjs || EMAILJS_PUBLIC_KEY === 'YOUR_EMAILJS_PUBLIC_KEY') {
         await new Promise(r => setTimeout(r, 700));
         statusEl.textContent = '✅ (Demo) Message prepared. Configure EmailJS to send.';
@@ -237,6 +238,7 @@ if (form) {
         return;
       }
       await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, payload);
+      statusEl.textContent = 'Sending via EmailJS...';
       statusEl.textContent = '✅ Message sent successfully!';
       form.reset();
     } catch (err) {
