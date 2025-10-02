@@ -1,363 +1,1006 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="google-site-verification" content="oyr0PMwzZUhSEASfn4PmKKvE0ji3RGRhfD-NYRCys_c" />
-  <title>Vishvanshu Chauhan | Portfolio</title>
-  <meta name="description" content="Vishvanshu Chauhan - Frontend & Fullstack Developer | Designer | AI Enthusiast | Projects & Portfolio">
-  <meta name="keywords" content="Vishvanshu Chauhan, Portfolio, Developer, Designer, Projects, AI, Game Dev">
-  <meta name="author" content="Vishvanshu Chauhan">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="google-site-verification"
+      content="oyr0PMwzZUhSEASfn4PmKKvE0ji3RGRhfD-NYRCys_c"
+    />
+    <title>Vishvanshu Chauhan | Portfolio</title>
+    <meta
+      name="description"
+      content="Vishvanshu Chauhan - Frontend & Fullstack Developer | Designer | AI Enthusiast | Projects & Portfolio"
+    />
+    <meta
+      name="keywords"
+      content="Vishvanshu Chauhan, Portfolio, Developer, Designer, Projects, AI, Game Dev"
+    />
+    <meta name="author" content="Vishvanshu Chauhan" />
 
-  <!-- Open Graph / Social Media -->
-  <meta property="og:title" content="Vishvanshu Chauhan | Portfolio" />
-  <meta property="og:description" content="Frontend & Fullstack Developer, AI Enthusiast, Game Developer. Explore my projects and portfolio." />
-  <meta property="og:image" content="assets/Vishvanshu.png" />
-  <meta property="og:url" content="https://vishvanshufolio.netlify.app" />
-  <meta name="twitter:card" content="summary_large_image" />
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Vishvanshu Chauhan | Portfolio" />
+    <meta
+      property="og:description"
+      content="Frontend & Fullstack Developer, AI Enthusiast, Game Developer. Explore my projects and portfolio."
+    />
+    <meta property="og:image" content="assets/Vishvanshu.png" />
+    <meta property="og:url" content="https://vishvanshufolio.netlify.app" />
+    <meta name="twitter:card" content="summary_large_image" />
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="style.css" />
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css" />
 
-  <!-- Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@2.16.0/devicon.min.css">
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@2.16.0/devicon.min.css"
+    />
 
-  <!-- JSON-LD Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Vishvanshu Chauhan",
-    "url": "https://vishvanshufolio.netlify.app",
-    "sameAs": [
-      "https://www.linkedin.com/in/vishvanshu-chauhan",
-      "https://www.instagram.com/vishvanshu_chauhan",
-      "https://github.com/chauhanvishvanshu"
-    ]
-  }
-  </script>
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Vishvanshu Chauhan",
+        "url": "https://vishvanshufolio.netlify.app",
+        "sameAs": [
+          "https://www.linkedin.com/in/vishvanshu-chauhan",
+          "https://www.instagram.com/vishvanshu_chauhan",
+          "https://github.com/chauhanvishvanshu"
+        ]
+      }
+    </script>
 
-  <!-- EmailJS SDK -->
-  <script src="https://cdn.emailjs.com/sdk/3.11.0/email.min.js" defer></script>
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop stop-color='%2300ffff'/%3E%3Cstop stop-color='%23ff00ff' offset='1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='12' ry='12' fill='%23e6ebf3'/%3E%3Cpath d='M18 44 L32 12 L46 44' stroke='url(%23g)' stroke-width='6' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='32' cy='44' r='4' fill='url(%23g)'/%3E%3C/svg%3E" type="image/svg+xml">
-  <link rel="preload" as="image" href="assets/Vishvanshu.png" fetchpriority="high" />
-</head>
-<body>
-  <!-- ====== Loader ====== -->
-  <div id="loader" aria-hidden="true">
-    <div class="loader-inner">
-      <div class="scanline"></div>
-      <div class="loader-text">
-        <span class="glitch" data-text="Booting Vishufolio OS...">Booting Vishufolio OS...</span>
-        <span class="glitch small" data-text="Loading modules: UI.neon | Core.holo | Net.contact">Loading modules: UI.neon | Core.holo | Net.contact</span>
-      </div>
-      <div class="boot-bars">
-        <div class="boot-bar"></div>
-        <div class="boot-bar"></div>
-        <div class="boot-bar"></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Particles Background -->
-  <div class="particles-container" aria-hidden="true"></div>
-
-  <!-- Neon Timeline Path -->
-  <aside class="timeline" aria-hidden="true">
-    <a href="#about" class="dot" data-target="about" title="About"></a>
-    <a href="#projects" class="dot" data-target="projects" title="Projects"></a>
-    <a href="#skills" class="dot" data-target="skills" title="Skills"></a>
-    <a href="#stats" class="dot" data-target="stats" title="Stats"></a>
-    <a href="#connect" class="dot" data-target="connect" title="Connect"></a>
-    <a href="#contact" class="dot" data-target="contact" title="Contact"></a>
-  </aside>
-
-  <!-- Navbar -->
-  <header>
-    <nav class="navbar hud" role="navigation" aria-label="Main Navigation">
-      <div class="logo">Vishufolio</div>
-      <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
-        <span class="bar" aria-hidden="true"></span>
-        <span class="bar" aria-hidden="true"></span>
-        <span class="bar" aria-hidden="true"></span>
-      </button>
-      <ul class="nav-links" role="menu">
-        <li role="none"><a role="menuitem" href="#about">About</a></li>
-        <li role="none"><a role="menuitem" href="#projects">Projects</a></li>
-        <li role="none"><a role="menuitem" href="#skills">Skills</a></li>
-        <li role="none"><a role="menuitem" href="#stats">Stats</a></li>
-        <li role="none"><a role="menuitem" href="#connect">Connect</a></li>
-        <li role="none"><a role="menuitem" href="#contact">Contact</a></li>
-        <li role="none"><button id="cmdk-btn" class="btn micro magnetic" type="button" aria-label="Command Palette (Ctrl+K)">⌘</button></li>
-      </ul>
-    </nav>
-  </header>
-
-  <!-- Hero Section -->
-  <section class="hero" id="home" aria-label="Home">
-    <div class="holo-wrap">
-      <div class="holo-avatar magnetic" aria-hidden="true">
-        <img src="assets/Vishvanshu.png" alt="Holographic avatar of Vishvanshu Chauhan" />
-        <div class="holo-overlay"></div>
-      </div>
-    </div>
-    <h1>Hi, I'm <span class="highlight">VISHVANSHU CHAUHAN</span></h1>
-    <h2>Fullstack Developer • AI Enthusiast • Game Dev</h2>
-    <div class="hero-actions">
-      <a href="#projects" class="btn magnetic">View Projects</a>
-      <a href="assets/Vishvanshu_resume.pdf" class="btn outline magnetic" download>Download CV</a>
-    </div>
-    <div class="hero-meta">
-      <div class="meta-item">GL Bajaj Institute (B.Tech - CSE AI)</div>
-      <div class="meta-item">Diploma CSE — Teerthanker Mahaveer University</div>
-      <div class="meta-item">Smart India Hackathon 2025 — Internal win </div>
-    </div>
-    <div class="scroll-indicator" aria-hidden="true">Scroll</div>
-  </section>
-
-  <!-- About Section -->
-  <section id="about" class="about" data-section="about" aria-labelledby="about-heading">
-    <h2 id="about-heading">About Me</h2>
-    <p>
-      I build beautiful and functional web applications and experiment with AI-driven features.
-      I have experience in Java, Python, C/C++, web tech (HTML/CSS/JS) and game development (Godot).
-      I enjoy making interactive UIs with neon/cyberpunk aesthetics and efficient, maintainable code.
-    </p>
-    <div class="quick-contact">
-      <div><strong>Email:</strong> <a href="mailto:chauhanvishvanshu@gmail.com">chauhanvishvanshu@gmail.com</a></div>
-      <div><strong>Phone:</strong> +91 63978 35158</div>
-      <div><strong>Location:</strong> Greater Noida, India</div>
-    </div>
-  </section>
-
-  <!-- Projects Section -->
-  <section id="projects" data-section="projects" aria-labelledby="projects-heading">
-    <h2 id="projects-heading">Projects</h2>
-    <div class="project-grid">
-      <article class="project-card magnetic" tabindex="0">
-        <h3>Mock Buddy</h3>
-        <p>Mock interview web app — frontend built with HTML/CSS/JS. Helps practice common interview questions and records answers for review.</p>
-        <div class="project-tags"><span>Web</span><span>JavaScript</span><span>UX</span></div>
-      </article>
-      <article class="project-card magnetic" tabindex="0">
-        <h3>Voice Assistant — Manya</h3>
-        <p>Python-based voice assistant with speech recognition, simple NLP commands and system integrations for common tasks.</p>
-        <div class="project-tags"><span>Python</span><span>Speech</span><span>AI</span></div>
-      </article>
-      <article class="project-card magnetic" tabindex="0">
-        <h3>E-Exam Application</h3>
-        <p>Desktop exam system implemented with Java (AWT/Swing) + SQL backend — built during diploma internship to manage tests & results.</p>
-        <div class="project-tags"><span>Java</span><span>SQL</span><span>Desktop</span></div>
-      </article>
-      <article class="project-card magnetic" tabindex="0">
-        <h3>Aayudhm (Game)</h3>
-        <p>2D action game made with Godot; pixel art created in Aseprite. Focus on gameplay feel and level design.</p>
-        <div class="project-tags"><span>Godot</span><span>GameDev</span><span>Aseprite</span></div>
-      </article>
-      <article class="project-card magnetic" tabindex="0">
-        <h3>Wish Website</h3>
-        <p>Portfolio / small e-commerce style website built with HTML/CSS/JavaScript during diploma — responsive layout, basic JS interactions.</p>
-        <div class="project-tags"><span>HTML</span><span>CSS</span><span>Responsive</span></div>
-      </article>
-      <article class="project-card magnetic" tabindex="0">
-        <h3>Online Voting Machine</h3>
-        <p>University-level C project simulating secure voting flows and tallying. Focused on correctness and UX for terminals.</p>
-        <div class="project-tags"><span>C</span><span>Systems</span><span>Security</span></div>
-      </article>
-    </div>
-  </section>
-
-  <!-- Skills Section -->
-  <section id="skills" class="skills-section" aria-labelledby="skills-heading">
-    <h2 id="skills-heading">My Skills</h2>
-
-    <!-- Frontend -->
-    <div class="skill-category">
-      <h3>Frontend</h3>
-      <div class="skill"><span class="skill-name"><i class="devicon-html5-plain colored"></i> HTML</span><div class="skill-bar"><div class="skill-progress html" style="--level: 95%"><span class="skill-percent">95%</span></div></div></div>
-      <div class="skill"><span class="skill-name"><i class="devicon-css3-plain colored"></i> CSS</span><div class="skill-bar"><div class="skill-progress css" style="--level: 90%"><span class="skill-percent">90%</span></div></div></div>
-      <div class="skill"><span class="skill-name"><i class="devicon-javascript-plain colored"></i> JavaScript</span><div class="skill-bar"><div class="skill-progress js" style="--level: 85%"><span class="skill-percent">85%</span></div></div></div>
-      <div class="skill"><span class="skill-name"><i class="devicon-react-original colored"></i> React.js</span><div class="skill-bar"><div class="skill-progress react" style="--level: 80%"><span class="skill-percent">80%</span></div></div></div>
-    </div>
-
-    <!-- Backend -->
-    <div class="skill-category">
-      <h3>Backend</h3>
-      <div class="skill"><span class="skill-name"><i class="devicon-nodejs-plain colored"></i> Node.js</span><div class="skill-bar"><div class="skill-progress node" style="--level: 75%"><span class="skill-percent">75%</span></div></div></div>
-      <div class="skill"><span class="skill-name"><i class="devicon-express-original"></i> Express.js</span><div class="skill-bar"><div class="skill-progress express" style="--level: 70%"><span class="skill-percent">70%</span></div></div></div>
-      <div class="skill"><span class="skill-name"><i class="devicon-mongodb-plain colored"></i> MongoDB</span><div class="skill-bar"><div class="skill-progress mongodb" style="--level: 65%"><span class="skill-percent">65%</span></div></div></div>
-    </div>
-
-    <!-- Programming Languages -->
-    <div class="skill-category">
-      <h3>Programming Languages</h3>
-      <div class="skill"><span class="skill-name"><i class="devicon-python-plain colored"></i> Python</span><div class="skill-bar"><div class="skill-progress python" style="--level: 90%"><span class="skill-percent">90%</span></div></div></div>
-      <div class="skill"><span class="skill-name"><i class="devicon-cplusplus-plain colored"></i> C++</span><div class="skill-bar"><div class="skill-progress cpp" style="--level: 85%"><span class="skill-percent">85%</span></div></div></div>
-      <div class="skill"><span class="skill-name"><i class="devicon-java-plain colored"></i> Java</span><div class="skill-bar"><div class="skill-progress java" style="--level: 75%"><span class="skill-percent">75%</span></div></div></div>
-      <div class="skill"><span class="skill-name"><i class="devicon-c-plain colored"></i> C</span><div class="skill-bar"><div class="skill-progress c" style="--level: 80%"><span class="skill-percent">80%</span></div></div></div>
-    </div>
-
-    <!-- Tools & Platforms -->
-    <div class="skill-category">
-      <h3>Tools & Platforms</h3>
-      <div class="skill"><span class="skill-name"><i class="devicon-git-plain colored"></i> Git & GitHub</span><div class="skill-bar"><div class="skill-progress git" style="--level: 85%"><span class="skill-percent">85%</span></div></div></div>
-      <div class="skill"><span class="skill-name"><i class="devicon-linux-plain"></i> Linux</span><div class="skill-bar"><div class="skill-progress linux" style="--level: 70%"><span class="skill-percent">70%</span></div></div></div>
-      <div class="skill"><span class="skill-name"><i class="devicon-docker-plain colored"></i> Docker</span><div class="skill-bar"><div class="skill-progress docker" style="--level: 60%"><span class="skill-percent">60%</span></div></div></div>
-      <div class="skill"><span class="skill-name"><i class="devicon-vscode-plain colored"></i> VS Code</span><div class="skill-bar"><div class="skill-progress vscode" style="--level: 95%"><span class="skill-percent">95%</span></div></div></div>
-      <div class="skill"><span class="skill-name"><i class="devicon-netlify-plain colored"></i> Netlify</span><div class="skill-bar"><div class="skill-progress netlify" style="--level: 80%"><span class="skill-percent">80%</span></div></div></div>
-      <div class="skill"><span class="skill-name"><i class="fa-brands fa-discord"></i> Discord</span><div class="skill-bar"><div class="skill-progress discord" style="--level: 85%"><span class="skill-percent">85%</span></div></div></div>
-    </div>
-
-    <!-- CS Fundamentals Badges -->
-    <div class="skill-category">
-      <h3>Computer Science Fundamentals</h3>
-      <div class="knowledge-badges">
-        <a href="https://www.geeksforgeeks.org/fundamentals-of-algorithms/" target="_blank" rel="noopener noreferrer" class="badge" aria-label="Algorithms Badge">Algorithms</a>
-        <a href="https://www.geeksforgeeks.org/data-structures/" target="_blank" rel="noopener noreferrer" class="badge" aria-label="Data Structures Badge">Data Structures</a>
-        <a href="https://www.geeksforgeeks.org/object-oriented-programming-oops-concept-in-java/" target="_blank" rel="noopener noreferrer" class="badge" aria-label="OOP Badge">OOP</a>
-        <a href="https://www.geeksforgeeks.org/dbms-tutorial/" target="_blank" rel="noopener noreferrer" class="badge" aria-label="Database Badge">Database</a>
-        <a href="https://www.geeksforgeeks.org/software-engineering/" target="_blank" rel="noopener noreferrer" class="badge" aria-label="Software Engineering Badge">Software Engg</a>
-      </div>
-    </div>
-  </section>
-  <!-- GitHub & Stats Section -->
-  <section id="stats" data-section="stats" aria-labelledby="stats-heading">
-    <h2 id="stats-heading">GitHub & Stats</h2>
-    <div class="stats-grid">
-      <div class="stat-card magnetic">
-        <div class="stat-value" id="gh-repos">--</div>
-        <div class="stat-label">Public Repos</div>
-      </div>
-      <div class="stat-card magnetic">
-        <div class="stat-value" id="gh-stars">--</div>
-        <div class="stat-label">Total Stars</div>
-      </div>
-      <div class="stat-card magnetic">
-        <div class="stat-value" id="gh-followers">--</div>
-        <div class="stat-label">Followers</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Connect Section -->
-  <section id="connect" data-section="connect" aria-labelledby="connect-heading">
-    <h2 id="connect-heading">Connect with Me</h2>
-
-    <!-- Social Media -->
-    <div class="connect-group">
-      <h3>Social Media</h3>
-      <div class="connect-grid">
-        <a class="connect-card magnetic" href="https://www.instagram.com/vishvanshu_chauhan/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-          <i class="fa-brands fa-instagram"></i><span>Instagram</span>
-        </a>
-        <a class="connect-card magnetic" href="https://x.com/vishvanshu_" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
-          <i class="fa-brands fa-x-twitter"></i><span>X</span>
-        </a>
-        <a class="connect-card magnetic" href="https://www.linkedin.com/in/vishvanshu-chauhan/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-          <i class="fa-brands fa-linkedin"></i><span>LinkedIn</span>
-        </a>
-        <a class="connect-card magnetic" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-          <i class="fa-brands fa-facebook"></i><span>Facebook</span>
-        </a>
-        <a class="connect-card magnetic" href="https://www.reddit.com/user/ApartCar358/" target="_blank" rel="noopener noreferrer" aria-label="Reddit">
-          <i class="fa-brands fa-reddit"></i><span>Reddit</span>
-        </a>
-        <a class="connect-card magnetic" href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-          <i class="fa-brands fa-youtube"></i><span>YouTube</span>
-        </a>
+    <!-- EmailJS SDK -->
+    <script
+      src="https://cdn.emailjs.com/sdk/3.11.0/email.min.js"
+      defer
+    ></script>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop stop-color='%2300ffff'/%3E%3Cstop stop-color='%23ff00ff' offset='1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='12' ry='12' fill='%23e6ebf3'/%3E%3Cpath d='M18 44 L32 12 L46 44' stroke='url(%23g)' stroke-width='6' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='32' cy='44' r='4' fill='url(%23g)'/%3E%3C/svg%3E"
+      type="image/svg+xml"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="assets/Vishvanshu.png"
+      fetchpriority="high"
+    />
+  </head>
+  <body>
+    <!-- ====== Loader ====== -->
+    <div id="loader" aria-hidden="true">
+      <div class="loader-inner">
+        <div class="scanline"></div>
+        <div class="loader-text">
+          <span class="glitch" data-text="Booting Vishufolio OS..."
+            >Booting Vishufolio OS...</span
+          >
+          <span
+            class="glitch small"
+            data-text="Loading modules: UI.neon | Core.holo | Net.contact"
+            >Loading modules: UI.neon | Core.holo | Net.contact</span
+          >
+        </div>
+        <div class="boot-bars">
+          <div class="boot-bar"></div>
+          <div class="boot-bar"></div>
+          <div class="boot-bar"></div>
+        </div>
       </div>
     </div>
 
-    <!-- Coding Profiles -->
-    <div class="connect-group">
-      <h3>Coding Profiles</h3>
-      <div class="connect-grid">
-        <a class="connect-card magnetic" href="https://leetcode.com/u/vishvanshu/" target="_blank" rel="noopener noreferrer" aria-label="LeetCode">
-          <i class="devicon-leetcode-plain"></i><span>LeetCode</span>
+    <!-- Particles Background -->
+    <div class="particles-container" aria-hidden="true"></div>
+
+    <!-- Neon Timeline Path -->
+    <aside class="timeline" aria-hidden="true">
+      <a href="#about" class="dot" data-target="about" title="About"></a>
+      <a
+        href="#projects"
+        class="dot"
+        data-target="projects"
+        title="Projects"
+      ></a>
+      <a
+        href="#experience"
+        class="dot"
+        data-target="experience"
+        title="Experience"
+      ></a>
+      <a href="#skills" class="dot" data-target="skills" title="Skills"></a>
+      <a href="#stats" class="dot" data-target="stats" title="Stats"></a>
+      <a
+        href="#spotlight"
+        class="dot"
+        data-target="spotlight"
+        title="Spotlight"
+      ></a>
+      <a href="#connect" class="dot" data-target="connect" title="Connect"></a>
+      <a href="#contact" class="dot" data-target="contact" title="Contact"></a>
+    </aside>
+
+    <!-- Navbar -->
+    <header>
+      <nav class="navbar hud" role="navigation" aria-label="Main Navigation">
+        <div class="logo">Vishufolio</div>
+        <button
+          class="menu-toggle"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+        >
+          <span class="bar" aria-hidden="true"></span>
+          <span class="bar" aria-hidden="true"></span>
+          <span class="bar" aria-hidden="true"></span>
+        </button>
+        <ul class="nav-links" role="menu">
+          <li role="none"><a role="menuitem" href="#about">About</a></li>
+          <li role="none"><a role="menuitem" href="#projects">Projects</a></li>
+          <li role="none">
+            <a role="menuitem" href="#experience">Experience</a>
+          </li>
+          <li role="none"><a role="menuitem" href="#skills">Skills</a></li>
+          <li role="none"><a role="menuitem" href="#stats">Stats</a></li>
+          <li role="none">
+            <a role="menuitem" href="#spotlight">Spotlight</a>
+          </li>
+          <li role="none"><a role="menuitem" href="#connect">Connect</a></li>
+          <li role="none"><a role="menuitem" href="#contact">Contact</a></li>
+          <li role="none">
+            <button
+              id="cmdk-btn"
+              class="btn micro magnetic"
+              type="button"
+              aria-label="Command Palette (Ctrl+K)"
+            >
+              ⌘
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home" aria-label="Home">
+      <div class="holo-wrap">
+        <div class="holo-avatar magnetic" aria-hidden="true">
+          <img
+            src="assets/Vishvanshu.png"
+            alt="Holographic avatar of Vishvanshu Chauhan"
+          />
+          <div class="holo-overlay"></div>
+        </div>
+      </div>
+      <h1>Hi, I'm <span class="highlight">VISHVANSHU CHAUHAN</span></h1>
+      <h2>Fullstack Developer • AI Enthusiast • Game Dev</h2>
+      <p class="hero-subtext" data-reveal>
+        I build cinematic, performance-first web experiences that blend
+        storytelling, design systems, and AI-enhanced interactions.
+      </p>
+      <div class="hero-insights" role="list">
+        <div class="hero-chip" role="listitem" data-reveal>
+          <span class="chip-label">Signature Style</span>
+          <span class="chip-value"
+            >Cyberpunk-inspired UI, spatial motion, pixel-perfect
+            responsiveness</span
+          >
+        </div>
+        <div class="hero-chip" role="listitem" data-reveal>
+          <span class="chip-label">Currently Crafting</span>
+          <span class="chip-value"
+            >Immersive AI dashboards &amp; gamified learning tools</span
+          >
+        </div>
+      </div>
+      <div class="hero-actions">
+        <a href="#projects" class="btn magnetic">View Projects</a>
+        <a
+          href="assets/Vishvanshu_resume.pdf"
+          class="btn outline magnetic"
+          download
+          >Download CV</a
+        >
+        <a
+          href="https://github.com/chauhanvishvanshu"
+          class="btn ghost magnetic"
+          target="_blank"
+          rel="noopener noreferrer"
+          >GitHub</a
+        >
+      </div>
+      <div class="hero-metrics">
+        <article class="hero-metric" data-reveal>
+          <span class="metric-value">05+</span>
+          <p class="metric-label">
+            High-visibility product launches with wow-factor interfaces
+          </p>
+        </article>
+        <article class="hero-metric" data-reveal>
+          <span class="metric-value">3x</span>
+          <p class="metric-label">
+            Hackathon finalist &amp; campus-wide innovation leader
+          </p>
+        </article>
+        <article class="hero-metric" data-reveal>
+          <span class="metric-value">∞</span>
+          <p class="metric-label">
+            Curiosity for web, AI &amp; game experiences
+          </p>
+        </article>
+      </div>
+      <div class="hero-meta">
+        <div class="meta-item" data-reveal>
+          <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
+          <span>GL Bajaj Institute · B.Tech CSE (AI)</span>
+        </div>
+        <div class="meta-item" data-reveal>
+          <i class="fa-solid fa-rocket" aria-hidden="true"></i>
+          <span>Smart India Hackathon 2025 · Internal win</span>
+        </div>
+        <div class="meta-item" data-reveal>
+          <i class="fa-solid fa-paint-brush" aria-hidden="true"></i>
+          <span>Designing hyper-polished multi-platform journeys</span>
+        </div>
+      </div>
+      <div class="hero-orb orb-one" aria-hidden="true"></div>
+      <div class="hero-orb orb-two" aria-hidden="true"></div>
+      <div class="hero-orb orb-three" aria-hidden="true"></div>
+      <div class="scroll-indicator" aria-hidden="true">Scroll</div>
+    </section>
+
+    <!-- About Section -->
+    <section
+      id="about"
+      class="about"
+      data-section="about"
+      aria-labelledby="about-heading"
+    >
+      <h2 id="about-heading">About Me</h2>
+      <p data-reveal>
+        I build beautiful and functional web applications and experiment with
+        AI-driven features. I have experience in Java, Python, C/C++, web tech
+        (HTML/CSS/JS) and game development (Godot). I enjoy making interactive
+        UIs with neon/cyberpunk aesthetics and efficient, maintainable code.
+      </p>
+      <div class="quick-contact" data-reveal>
+        <div>
+          <strong>Email:</strong>
+          <a href="mailto:chauhanvishvanshu@gmail.com"
+            >chauhanvishvanshu@gmail.com</a
+          >
+        </div>
+        <div><strong>Phone:</strong> +91 63978 35158</div>
+        <div><strong>Location:</strong> Greater Noida, India</div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section
+      id="projects"
+      data-section="projects"
+      aria-labelledby="projects-heading"
+    >
+      <h2 id="projects-heading">Projects</h2>
+      <div class="project-grid">
+        <article class="project-card magnetic" tabindex="0" data-reveal>
+          <h3>Mock Buddy</h3>
+          <p>
+            Mock interview web app — frontend built with HTML/CSS/JS. Helps
+            practice common interview questions and records answers for review.
+          </p>
+          <div class="project-tags">
+            <span>Web</span><span>JavaScript</span><span>UX</span>
+          </div>
+        </article>
+        <article class="project-card magnetic" tabindex="0" data-reveal>
+          <h3>Voice Assistant — Manya</h3>
+          <p>
+            Python-based voice assistant with speech recognition, simple NLP
+            commands and system integrations for common tasks.
+          </p>
+          <div class="project-tags">
+            <span>Python</span><span>Speech</span><span>AI</span>
+          </div>
+        </article>
+        <article class="project-card magnetic" tabindex="0" data-reveal>
+          <h3>E-Exam Application</h3>
+          <p>
+            Desktop exam system implemented with Java (AWT/Swing) + SQL backend
+            — built during diploma internship to manage tests & results.
+          </p>
+          <div class="project-tags">
+            <span>Java</span><span>SQL</span><span>Desktop</span>
+          </div>
+        </article>
+        <article class="project-card magnetic" tabindex="0" data-reveal>
+          <h3>Aayudhm (Game)</h3>
+          <p>
+            2D action game made with Godot; pixel art created in Aseprite. Focus
+            on gameplay feel and level design.
+          </p>
+          <div class="project-tags">
+            <span>Godot</span><span>GameDev</span><span>Aseprite</span>
+          </div>
+        </article>
+        <article class="project-card magnetic" tabindex="0" data-reveal>
+          <h3>Wish Website</h3>
+          <p>
+            Portfolio / small e-commerce style website built with
+            HTML/CSS/JavaScript during diploma — responsive layout, basic JS
+            interactions.
+          </p>
+          <div class="project-tags">
+            <span>HTML</span><span>CSS</span><span>Responsive</span>
+          </div>
+        </article>
+        <article class="project-card magnetic" tabindex="0" data-reveal>
+          <h3>Online Voting Machine</h3>
+          <p>
+            University-level C project simulating secure voting flows and
+            tallying. Focused on correctness and UX for terminals.
+          </p>
+          <div class="project-tags">
+            <span>C</span><span>Systems</span><span>Security</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section
+      id="experience"
+      data-section="experience"
+      aria-labelledby="experience-heading"
+    >
+      <h2 id="experience-heading">Experience &amp; Leadership</h2>
+      <div class="experience-timeline">
+        <article class="experience-item" data-reveal>
+          <div class="experience-marker" aria-hidden="true"></div>
+          <span class="experience-year">2024 — Present</span>
+          <div class="experience-body">
+            <h3>
+              Lead Frontend Engineer · Freelance &amp; Studio Collaborations
+            </h3>
+            <p>
+              Owning end-to-end delivery for immersive marketing sites, AI
+              copilots, and interactive dashboards.
+            </p>
+            <ul class="experience-highlights">
+              <li>
+                Designed cinematic landing experiences that increased demo
+                sign-ups by up to 38%.
+              </li>
+              <li>
+                Built component libraries with accessibility baked in for rapid
+                iteration.
+              </li>
+            </ul>
+          </div>
+        </article>
+        <article class="experience-item" data-reveal>
+          <div class="experience-marker" aria-hidden="true"></div>
+          <span class="experience-year">2023 — 2024</span>
+          <div class="experience-body">
+            <h3>Smart India Hackathon · AI-Powered Solutions</h3>
+            <p>
+              Led UI/UX and integrations for national-level hackathon prototypes
+              aligned to real problem statements.
+            </p>
+            <ul class="experience-highlights">
+              <li>
+                Rapid prototyping with real-time feedback loops and polished
+                storytelling.
+              </li>
+              <li>
+                Integrated AI-assisted flows that made complex data approachable
+                and actionable.
+              </li>
+            </ul>
+          </div>
+        </article>
+        <article class="experience-item" data-reveal>
+          <div class="experience-marker" aria-hidden="true"></div>
+          <span class="experience-year">2021 — 2023</span>
+          <div class="experience-body">
+            <h3>Diploma Projects · Teerthanker Mahaveer University</h3>
+            <p>
+              Delivered production-ready applications, simulations, and games
+              with multidisciplinary teams.
+            </p>
+            <ul class="experience-highlights">
+              <li>
+                Shipped Java- and C-based systems adopted for academic
+                demonstrations and labs.
+              </li>
+              <li>
+                Championed game design principles to craft engaging learning
+                experiences.
+              </li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section
+      id="skills"
+      class="skills-section"
+      aria-labelledby="skills-heading"
+    >
+      <h2 id="skills-heading">My Skills</h2>
+
+      <!-- Frontend -->
+      <div class="skill-category">
+        <h3>Frontend</h3>
+        <div class="skill">
+          <span class="skill-name"
+            ><i class="devicon-html5-plain colored"></i> HTML</span
+          >
+          <div class="skill-bar">
+            <div class="skill-progress html" style="--level: 95%">
+              <span class="skill-percent">95%</span>
+            </div>
+          </div>
+        </div>
+        <div class="skill">
+          <span class="skill-name"
+            ><i class="devicon-css3-plain colored"></i> CSS</span
+          >
+          <div class="skill-bar">
+            <div class="skill-progress css" style="--level: 90%">
+              <span class="skill-percent">90%</span>
+            </div>
+          </div>
+        </div>
+        <div class="skill">
+          <span class="skill-name"
+            ><i class="devicon-javascript-plain colored"></i> JavaScript</span
+          >
+          <div class="skill-bar">
+            <div class="skill-progress js" style="--level: 85%">
+              <span class="skill-percent">85%</span>
+            </div>
+          </div>
+        </div>
+        <div class="skill">
+          <span class="skill-name"
+            ><i class="devicon-react-original colored"></i> React.js</span
+          >
+          <div class="skill-bar">
+            <div class="skill-progress react" style="--level: 80%">
+              <span class="skill-percent">80%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Backend -->
+      <div class="skill-category">
+        <h3>Backend</h3>
+        <div class="skill">
+          <span class="skill-name"
+            ><i class="devicon-nodejs-plain colored"></i> Node.js</span
+          >
+          <div class="skill-bar">
+            <div class="skill-progress node" style="--level: 75%">
+              <span class="skill-percent">75%</span>
+            </div>
+          </div>
+        </div>
+        <div class="skill">
+          <span class="skill-name"
+            ><i class="devicon-express-original"></i> Express.js</span
+          >
+          <div class="skill-bar">
+            <div class="skill-progress express" style="--level: 70%">
+              <span class="skill-percent">70%</span>
+            </div>
+          </div>
+        </div>
+        <div class="skill">
+          <span class="skill-name"
+            ><i class="devicon-mongodb-plain colored"></i> MongoDB</span
+          >
+          <div class="skill-bar">
+            <div class="skill-progress mongodb" style="--level: 65%">
+              <span class="skill-percent">65%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Programming Languages -->
+      <div class="skill-category">
+        <h3>Programming Languages</h3>
+        <div class="skill">
+          <span class="skill-name"
+            ><i class="devicon-python-plain colored"></i> Python</span
+          >
+          <div class="skill-bar">
+            <div class="skill-progress python" style="--level: 90%">
+              <span class="skill-percent">90%</span>
+            </div>
+          </div>
+        </div>
+        <div class="skill">
+          <span class="skill-name"
+            ><i class="devicon-cplusplus-plain colored"></i> C++</span
+          >
+          <div class="skill-bar">
+            <div class="skill-progress cpp" style="--level: 85%">
+              <span class="skill-percent">85%</span>
+            </div>
+          </div>
+        </div>
+        <div class="skill">
+          <span class="skill-name"
+            ><i class="devicon-java-plain colored"></i> Java</span
+          >
+          <div class="skill-bar">
+            <div class="skill-progress java" style="--level: 75%">
+              <span class="skill-percent">75%</span>
+            </div>
+          </div>
+        </div>
+        <div class="skill">
+          <span class="skill-name"
+            ><i class="devicon-c-plain colored"></i> C</span
+          >
+          <div class="skill-bar">
+            <div class="skill-progress c" style="--level: 80%">
+              <span class="skill-percent">80%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tools & Platforms -->
+      <div class="skill-category">
+        <h3>Tools & Platforms</h3>
+        <div class="skill">
+          <span class="skill-name"
+            ><i class="devicon-git-plain colored"></i> Git & GitHub</span
+          >
+          <div class="skill-bar">
+            <div class="skill-progress git" style="--level: 85%">
+              <span class="skill-percent">85%</span>
+            </div>
+          </div>
+        </div>
+        <div class="skill">
+          <span class="skill-name"
+            ><i class="devicon-linux-plain"></i> Linux</span
+          >
+          <div class="skill-bar">
+            <div class="skill-progress linux" style="--level: 70%">
+              <span class="skill-percent">70%</span>
+            </div>
+          </div>
+        </div>
+        <div class="skill">
+          <span class="skill-name"
+            ><i class="devicon-docker-plain colored"></i> Docker</span
+          >
+          <div class="skill-bar">
+            <div class="skill-progress docker" style="--level: 60%">
+              <span class="skill-percent">60%</span>
+            </div>
+          </div>
+        </div>
+        <div class="skill">
+          <span class="skill-name"
+            ><i class="devicon-vscode-plain colored"></i> VS Code</span
+          >
+          <div class="skill-bar">
+            <div class="skill-progress vscode" style="--level: 95%">
+              <span class="skill-percent">95%</span>
+            </div>
+          </div>
+        </div>
+        <div class="skill">
+          <span class="skill-name"
+            ><i class="devicon-netlify-plain colored"></i> Netlify</span
+          >
+          <div class="skill-bar">
+            <div class="skill-progress netlify" style="--level: 80%">
+              <span class="skill-percent">80%</span>
+            </div>
+          </div>
+        </div>
+        <div class="skill">
+          <span class="skill-name"
+            ><i class="fa-brands fa-discord"></i> Discord</span
+          >
+          <div class="skill-bar">
+            <div class="skill-progress discord" style="--level: 85%">
+              <span class="skill-percent">85%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CS Fundamentals Badges -->
+      <div class="skill-category">
+        <h3>Computer Science Fundamentals</h3>
+        <div class="knowledge-badges">
+          <a
+            href="https://www.geeksforgeeks.org/fundamentals-of-algorithms/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="badge"
+            aria-label="Algorithms Badge"
+            >Algorithms</a
+          >
+          <a
+            href="https://www.geeksforgeeks.org/data-structures/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="badge"
+            aria-label="Data Structures Badge"
+            >Data Structures</a
+          >
+          <a
+            href="https://www.geeksforgeeks.org/object-oriented-programming-oops-concept-in-java/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="badge"
+            aria-label="OOP Badge"
+            >OOP</a
+          >
+          <a
+            href="https://www.geeksforgeeks.org/dbms-tutorial/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="badge"
+            aria-label="Database Badge"
+            >Database</a
+          >
+          <a
+            href="https://www.geeksforgeeks.org/software-engineering/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="badge"
+            aria-label="Software Engineering Badge"
+            >Software Engg</a
+          >
+        </div>
+      </div>
+    </section>
+    <!-- GitHub & Stats Section -->
+    <section id="stats" data-section="stats" aria-labelledby="stats-heading">
+      <h2 id="stats-heading">GitHub & Stats</h2>
+      <div class="stats-grid">
+        <div class="stat-card magnetic" data-reveal>
+          <div class="stat-value" id="gh-repos">--</div>
+          <div class="stat-label">Public Repos</div>
+        </div>
+        <div class="stat-card magnetic" data-reveal>
+          <div class="stat-value" id="gh-stars">--</div>
+          <div class="stat-label">Total Stars</div>
+        </div>
+        <div class="stat-card magnetic" data-reveal>
+          <div class="stat-value" id="gh-followers">--</div>
+          <div class="stat-label">Followers</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Spotlight Section -->
+    <section
+      id="spotlight"
+      data-section="spotlight"
+      aria-labelledby="spotlight-heading"
+    >
+      <h2 id="spotlight-heading">Spotlight Moments</h2>
+      <p class="spotlight-lead" data-reveal>
+        A snapshot of recognitions, results, and recent experiments that
+        showcase my love for polishing the details.
+      </p>
+      <div class="spotlight-grid">
+        <article class="spotlight-card" data-reveal>
+          <span class="spotlight-badge">Impact</span>
+          <h3>Design systems that convert</h3>
+          <p>
+            Crafted modular UI kits that reduced build time by 40% while keeping
+            the neon aesthetic crisp on every viewport.
+          </p>
+          <ul>
+            <li>Adaptive typography + color modes for accessibility</li>
+            <li>Reusable animation primitives for immersive flows</li>
+          </ul>
+        </article>
+        <article class="spotlight-card" data-reveal>
+          <span class="spotlight-badge">Recognition</span>
+          <h3>Hackathon &amp; Campus Innovator</h3>
+          <p>
+            Multiple podium finishes and jury mentions for experiential
+            prototypes and AI-first UX thinking.
+          </p>
+          <ul>
+            <li>Co-led storytelling demos that wowed judges</li>
+            <li>
+              Brought tactile feedback and motion design into presentations
+            </li>
+          </ul>
+        </article>
+        <article class="spotlight-card" data-reveal>
+          <span class="spotlight-badge">Lab</span>
+          <h3>Next experiments</h3>
+          <p>
+            Exploring WebGL particle systems, Lottie-driven interactions, and
+            AI-assisted world building for games.
+          </p>
+          <a class="spotlight-link" href="#projects">Peek at active builds →</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- Connect Section -->
+    <section
+      id="connect"
+      data-section="connect"
+      aria-labelledby="connect-heading"
+    >
+      <h2 id="connect-heading">Connect with Me</h2>
+
+      <!-- Social Media -->
+      <div class="connect-group" data-reveal>
+        <h3>Social Media</h3>
+        <div class="connect-grid">
+          <a
+            class="connect-card magnetic"
+            href="https://www.instagram.com/vishvanshu_chauhan/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+          >
+            <i class="fa-brands fa-instagram"></i><span>Instagram</span>
+          </a>
+          <a
+            class="connect-card magnetic"
+            href="https://x.com/vishvanshu_"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="X (Twitter)"
+          >
+            <i class="fa-brands fa-x-twitter"></i><span>X</span>
+          </a>
+          <a
+            class="connect-card magnetic"
+            href="https://www.linkedin.com/in/vishvanshu-chauhan/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+          >
+            <i class="fa-brands fa-linkedin"></i><span>LinkedIn</span>
+          </a>
+          <a
+            class="connect-card magnetic"
+            href="https://www.facebook.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+          >
+            <i class="fa-brands fa-facebook"></i><span>Facebook</span>
+          </a>
+          <a
+            class="connect-card magnetic"
+            href="https://www.reddit.com/user/ApartCar358/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Reddit"
+          >
+            <i class="fa-brands fa-reddit"></i><span>Reddit</span>
+          </a>
+          <a
+            class="connect-card magnetic"
+            href="https://www.youtube.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="YouTube"
+          >
+            <i class="fa-brands fa-youtube"></i><span>YouTube</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Coding Profiles -->
+      <div class="connect-group" data-reveal>
+        <h3>Coding Profiles</h3>
+        <div class="connect-grid">
+          <a
+            class="connect-card magnetic"
+            href="https://leetcode.com/u/vishvanshu/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LeetCode"
+          >
+            <i class="devicon-leetcode-plain"></i><span>LeetCode</span>
+          </a>
+          <a
+            class="connect-card magnetic"
+            href="https://www.hackerrank.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="HackerRank"
+          >
+            <i class="devicon-hackerrank-plain"></i><span>HackerRank</span>
+          </a>
+          <a
+            class="connect-card magnetic"
+            href="https://github.com/chauhanvishvanshu"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+          >
+            <i class="fa-brands fa-github"></i><span>GitHub</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Messaging -->
+      <div class="connect-group" data-reveal>
+        <h3>Messaging</h3>
+        <div class="connect-grid">
+          <a
+            class="connect-card magnetic"
+            href="https://wa.me/916397835158"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="WhatsApp"
+          >
+            <i class="fa-brands fa-whatsapp"></i><span>WhatsApp</span>
+          </a>
+          <a
+            class="connect-card magnetic"
+            href="https://t.me/vishvanshu_chauhan"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Telegram"
+          >
+            <i class="fa-brands fa-telegram"></i><span>Telegram</span>
+          </a>
+          <a
+            class="connect-card magnetic"
+            href="https://discord.gg/5H7KX8V7Q2"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Discord"
+          >
+            <i class="fa-brands fa-discord"></i><span>Discord</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Developer / Hosting -->
+      <div class="connect-group" data-reveal>
+        <h3>Developer / Hosting</h3>
+        <div class="connect-grid">
+          <a
+            class="connect-card magnetic"
+            href="https://app.netlify.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Netlify"
+          >
+            <i class="devicon-netlify-plain"></i><span>Netlify</span>
+          </a>
+          <a
+            class="connect-card magnetic"
+            href="https://code.visualstudio.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="VS Code"
+          >
+            <i class="devicon-vscode-plain"></i><span>VS Code</span>
+          </a>
+        </div>
+      </div>
+
+      <p class="connect-note">
+        Tip: Replace placeholder links (e.g., Telegram, Discord ID) with your
+        actual usernames.
+      </p>
+    </section>
+
+    <!-- Contact Section -->
+    <section
+      id="contact"
+      data-section="contact"
+      aria-labelledby="contact-heading"
+    >
+      <h2 id="contact-heading">Contact Me</h2>
+      <form id="contact-form" aria-label="Contact form" data-reveal>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Your Name"
+          autocomplete="name"
+          required
+        />
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Your Email"
+          autocomplete="email"
+          required
+        />
+        <textarea
+          id="message"
+          name="message"
+          placeholder="Your Message"
+          required
+        ></textarea>
+        <button type="submit" class="btn magnetic">Send Message</button>
+        <small
+          id="form-status"
+          class="form-status"
+          role="status"
+          aria-live="polite"
+        ></small>
+      </form>
+
+      <div class="social-icons" aria-label="Social links" data-reveal>
+        <a
+          href="https://github.com/chauhanvishvanshu"
+          class="social-icon magnetic"
+          aria-label="GitHub"
+          title="GitHub"
+        >
+          <i class="fa-brands fa-github"></i>
         </a>
-        <a class="connect-card magnetic" href="https://www.hackerrank.com/" target="_blank" rel="noopener noreferrer" aria-label="HackerRank">
-          <i class="devicon-hackerrank-plain"></i><span>HackerRank</span>
+        <a
+          href="https://www.linkedin.com/in/vishvanshu-chauhan/"
+          class="social-icon magnetic"
+          aria-label="LinkedIn"
+          title="LinkedIn"
+        >
+          <i class="fa-brands fa-linkedin"></i>
         </a>
-        <a class="connect-card magnetic" href="https://github.com/chauhanvishvanshu" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-          <i class="fa-brands fa-github"></i><span>GitHub</span>
+        <a
+          href="https://x.com/vishvanshu_"
+          class="social-icon magnetic"
+          aria-label="Twitter"
+          title="Twitter"
+        >
+          <i class="fa-brands fa-x-twitter"></i>
         </a>
+        <a
+          href="https://www.instagram.com/vishvanshu_chauhan/"
+          class="social-icon magnetic"
+          aria-label="Instagram"
+          title="Instagram"
+        >
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- Command Palette -->
+    <div id="command-palette" aria-hidden="true">
+      <div class="cmdk-modal">
+        <input
+          type="text"
+          id="cmdk-input"
+          placeholder="Type to search: About, Projects, Skills, Stats, Connect, Contact..."
+          aria-label="Command Palette"
+        />
+        <ul id="cmdk-results"></ul>
       </div>
     </div>
 
-    <!-- Messaging -->
-    <div class="connect-group">
-      <h3>Messaging</h3>
-      <div class="connect-grid">
-        <a class="connect-card magnetic" href="https://wa.me/916397835158" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-          <i class="fa-brands fa-whatsapp"></i><span>WhatsApp</span>
-        </a>
-        <a class="connect-card magnetic" href="https://t.me/vishvanshu_chauhan" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
-          <i class="fa-brands fa-telegram"></i><span>Telegram</span>
-        </a>
-        <a class="connect-card magnetic" href="https://discord.gg/5H7KX8V7Q2" target="_blank" rel="noopener noreferrer" aria-label="Discord">
-          <i class="fa-brands fa-discord"></i><span>Discord</span>
-        </a>
-      </div>
-    </div>
+    <!-- Footer -->
+    <footer>&copy; 2025 Vishvanshu Chauhan. All rights reserved.</footer>
 
-    <!-- Developer / Hosting -->
-    <div class="connect-group">
-      <h3>Developer / Hosting</h3>
-      <div class="connect-grid">
-        <a class="connect-card magnetic" href="https://app.netlify.com/" target="_blank" rel="noopener noreferrer" aria-label="Netlify">
-          <i class="devicon-netlify-plain"></i><span>Netlify</span>
-        </a>
-        <a class="connect-card magnetic" href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer" aria-label="VS Code">
-          <i class="devicon-vscode-plain"></i><span>VS Code</span>
-        </a>
-      </div>
-    </div>
-
-    <p class="connect-note">Tip: Replace placeholder links (e.g., Telegram, Discord ID) with your actual usernames.</p>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" data-section="contact" aria-labelledby="contact-heading">
-    <h2 id="contact-heading">Contact Me</h2>
-    <form id="contact-form" aria-label="Contact form">
-      <input type="text" id="name" name="name" placeholder="Your Name" autocomplete="name" required />
-      <input type="email" id="email" name="email" placeholder="Your Email" autocomplete="email" required />
-      <textarea id="message" name="message" placeholder="Your Message" required></textarea>
-      <button type="submit" class="btn magnetic">Send Message</button>
-      <small id="form-status" class="form-status" role="status" aria-live="polite"></small>
-    </form>
-
-    <div class="social-icons" aria-label="Social links">
-      <a href="https://github.com/chauhanvishvanshu" class="social-icon magnetic" aria-label="GitHub" title="GitHub">
-        <i class="fa-brands fa-github"></i>
-      </a>
-      <a href="https://www.linkedin.com/in/vishvanshu-chauhan/" class="social-icon magnetic" aria-label="LinkedIn" title="LinkedIn">
-        <i class="fa-brands fa-linkedin"></i>
-      </a>
-      <a href="https://x.com/vishvanshu_" class="social-icon magnetic" aria-label="Twitter" title="Twitter">
-        <i class="fa-brands fa-x-twitter"></i>
-      </a>
-      <a href="https://www.instagram.com/vishvanshu_chauhan/" class="social-icon magnetic" aria-label="Instagram" title="Instagram">
-        <i class="fa-brands fa-instagram"></i>
-      </a>
-    </div>
-  </section>
-
-  <!-- Command Palette -->
-  <div id="command-palette" aria-hidden="true">
-    <div class="cmdk-modal">
-      <input type="text" id="cmdk-input" placeholder="Type to search: About, Projects, Skills, Stats, Connect, Contact..." aria-label="Command Palette">
-      <ul id="cmdk-results"></ul>
-    </div>
-  </div>
-
-  <!-- Footer -->
-  <footer>
-    &copy; 2025 Vishvanshu Chauhan. All rights reserved.
-  </footer>
-
-  <script src="script.js" defer></script>
-  
-</body>
+    <script src="script.js" defer></script>
+  </body>
 </html>
