@@ -1,6 +1,5 @@
 # Vishvanshu Chauhan — Portfolio
 
-![Portfolio Banner](assets/Vishvanshu_banner.jpg)
 
 A **futuristic portfolio website** designed to showcase projects, skills, and contact information in a sleek, cyberpunk-inspired layout. Built using **HTML, CSS, and JavaScript**, it combines visual effects with interactive functionality for a modern web experience.
 
