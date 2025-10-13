@@ -107,11 +107,7 @@ Portfolio/
 You can view or download Vishvanshu Chauhan's professional **Resume/CV** directly on the web from the hero section:
 🔗 [View Resume Online](https://vishvanshufolio.netlify.app/assets/Vishvanshu_resume.pdf)
 
----
-
-## 📜 License
-
-This project is licensed under the **MIT License**.
+--
 
 ---
 
